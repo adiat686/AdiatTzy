@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Adiat</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .navbar {
+      transition: top 0.4s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Top Navbar -->
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 navbar">
+    <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-3">
+      <h1 class="font-bold text-lg text-purple-700">Adiat</h1>
+      <div class="flex space-x-5 text-gray-700 text-xl">
+        <a href="https://www.instagram.com/adiatpahlasaputra?igsh=MXhrc2E4eDV5d2Zudw==" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@orangbiasa0714?_t=ZS-90DJZss48Tk&_r=1" target="_blank" class="hover:text-black"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/14HbpVa4f2e/" target="_blank" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/adiat686" target="_blank" class="hover:text-gray-800"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-purple-700 to-blue-800 text-white text-center px-6">
+    <img src="Adiat.jpg" alt="Foto Saya" class="w-40 h-40 md:w-52 md:h-52 object-cover rounded-full shadow-2xl mb-6 border-4 border-white" data-aos="fade-down">
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-wide" data-aos="fade-up">Adiat Pahla Saputra</h1>
+    <p class="text-lg mt-4 opacity-90" data-aos="fade-up" data-aos-delay="200">
+      Pelajar SMKN 4 Klaten / TJKT 1 / Pecinta Teknologi & Fotografi
+    </p>
+    <a href="#tentang" class="mt-8 px-8 py-3 bg-white text-gray-900 font-semibold rounded-full shadow-lg hover:bg-gray-200 transition" data-aos="zoom-in" data-aos-delay="400">
+      Scroll ke Bawah
+    </a>
+  </section>
+
+  <!-- Tentang Saya -->
+  <section id="tentang" class="max-w-4xl mx-auto py-24 px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center text-purple-700" data-aos="fade-up">Tentang Saya</h2>
+    <p class="leading-relaxed text-gray-700 text-center text-lg" data-aos="fade-up" data-aos-delay="200">
+      Halo, saya <strong>Adiat Pahla Saputra</strong> kelas X TJKT 1 SMK Negeri 4 Klaten. 
+      Saya suka belajar hal baru, cepat beradaptasi, dan mampu bekerja sama dalam tim. 
+      Saya percaya bahwa dengan teknologi, kita bisa menciptakan hal-hal bermanfaat untuk masa depan.
+    </p>
+  </section>
+
+  <!-- Kemampuan -->
+  <section id="skills" class="bg-gray-100 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-12 text-center text-purple-700" data-aos="fade-up">Kemampuan</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-users text-purple-600 text-3xl mb-4"></i>
+          <h3 class="font-semibold text-xl mb-2">Kerja Sama</h3>
+          <p class="text-gray-600">Mampu bekerja sama dalam tim dengan baik untuk mencapai tujuan bersama.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-sync-alt text-purple-600 text-3xl mb-4"></i>
+          <h3 class="font-semibold text-xl mb-2">Adaptasi</h3>
+          <p class="text-gray-600">Mudah beradaptasi dengan lingkungan baru dan cepat belajar hal baru.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-code text-purple-600 text-3xl mb-4"></i>
+          <h3 class="font-semibold text-xl mb-2">Pemrograman</h3>
+          <p class="text-gray-600">Menguasai dasar-dasar pemrograman HTML dan siap mengembangkan keterampilan lain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Informasi Lain -->
+  <section id="info" class="max-w-4xl mx-auto py-24 px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center text-purple-700" data-aos="fade-up">Informasi Lain</h2>
+    <ul class="space-y-4 text-gray-700 text-center text-lg" data-aos="fade-up" data-aos-delay="200">
+      <li><strong>Pendidikan:</strong> SMK Negeri 4 Klaten - TJKT</li>
+      <li><strong>Pengalaman:</strong> Membuat website portofolio sederhana</li>
+      <li><strong>Hobi:</strong> Fotografi, Teknologi, Eksperimen Kreatif</li>
+    </ul>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="bg-gray-900 text-white py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Kontak</h2>
+      <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Hubungi saya melalui kontak berikut:</p>
+      <p data-aos="fade-up" data-aos-delay="200">Email: <a href="mailto:adiatpahla3@gmail.com" class="underline">adiatpahla3@gmail.com</a></p>
+      <p data-aos="fade-up" data-aos-delay="300">Telepon: 0882003747161</p>
+      <div class="mt-8 flex justify-center space-x-10" data-aos="zoom-in" data-aos-delay="400">
+        <a href="https://www.instagram.com/adiatpahlasaputra?igsh=MXhrc2E4eDV5d2Zudw==" target="_blank" class="hover:text-pink-400 text-2xl"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@orangbiasa0714?_t=ZS-90DJZss48Tk&_r=1" target="_blank" class="hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/14HbpVa4f2e/" target="_blank" class="hover:text-blue-400 text-2xl"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/adiat686" target="_blank" class="hover:text-gray-300 text-2xl"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500 text-sm bg-gray-100">
+    © 2025 Adiat Pahla Saputra. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Navbar auto hide saat scroll ke bawah
+    let prevScroll = window.pageYOffset;
+    window.onscroll = function() {
+      let currentScroll = window.pageYOffset;
+      if (prevScroll > currentScroll) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-80px";
+      }
+      prevScroll = currentScroll;
+    }
+  </script>
+</body>
+</html>
