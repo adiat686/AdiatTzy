@@ -1,50 +1,70 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4f46e5" />
   <title>Portofolio Adiat</title>
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    html { scroll-behavior: smooth; }
-    /* Navbar hide/show effect */
-    .navbar {
-      transition: top 0.4s;
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <!-- Bar Sosial Media -->
-  <div class="w-full bg-white shadow-sm fixed top-0 z-50 navbar" id="navbar">
-    <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
-      <h1 class="font-bold text-xl text-purple-700">Adiat</h1>
-      <div class="flex space-x-4 text-gray-700 text-lg">
-        <a href="https://www.instagram.com/adiatpahlasaputra?igsh=MXhrc2E4eDV5d2Zudw==" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@orangbiasa0714?_t=ZS-90DJZss48Tk&_r=1" target="_blank" class="hover:text-black"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.facebook.com/share/14HbpVa4f2e/" target="_blank" class="hover:text-blue-600"><i class="fab fa-facebook"></i></a>
-        <a href="https://github.com/adiat686" target="_blank" class="hover:text-gray-800"><i class="fab fa-github"></i></a>
+  <style>
+    .navbar { transition: top 0.4s; }
+  </style>
+
+  <!-- Manifest PWA -->
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50">
+    <div class="container mx-auto flex justify-between items-center px-4 md:px-8 py-3">
+      <h1 class="font-bold text-lg md:text-xl text-purple-700 dark:text-purple-400">Adiat</h1>
+
+      <!-- Menu desktop -->
+      <div class="hidden md:flex space-x-6 text-gray-700 dark:text-gray-200 text-base font-medium">
+        <a href="#tentang" class="hover:text-purple-500">Tentang</a>
+        <a href="#skills" class="hover:text-purple-500">Kemampuan</a>
+        <a href="#info" class="hover:text-purple-500">Informasi</a>
+        <a href="#kontak" class="hover:text-purple-500">Kontak</a>
+      </div>
+
+      <!-- Tombol sosial + menu hamburger -->
+      <div class="flex items-center space-x-4">
+        <a href="https://github.com/adiat686" target="_blank" class="hidden sm:inline hover:text-gray-800 dark:hover:text-white"><i class="fab fa-github text-lg"></i></a>
+        <button id="menu-btn" class="md:hidden text-2xl text-purple-700 dark:text-purple-300 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
       </div>
     </div>
-  </div>
+
+    <!-- Menu Mobile -->
+    <div id="menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-inner px-6 pb-4 space-y-3 text-gray-700 dark:text-gray-200">
+      <a href="#tentang" class="block hover:text-purple-500">Tentang</a>
+      <a href="#skills" class="block hover:text-purple-500">Kemampuan</a>
+      <a href="#info" class="block hover:text-purple-500">Informasi</a>
+      <a href="#kontak" class="block hover:text-purple-500">Kontak</a>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-purple-700 text-white text-center px-6 pt-24">
-    <img src="Adiat.jpg" alt="Foto Saya" class="w-40 h-40 md:w-52 md:h-52 object-cover rounded-full shadow-2xl mb-6 border-4 border-white" data-aos="fade-down">
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-wide" data-aos="fade-up">Adiat Pahla Saputra</h1>
-    <p class="text-lg mt-4 opacity-90" data-aos="fade-up" data-aos-delay="200">Pelajar / X TJKT 1 / Explorasi Tanpa Henti</p>
-    <a href="#tentang" class="mt-8 px-8 py-3 bg-white text-gray-900 font-semibold rounded-full shadow-lg hover:bg-gray-200 transition" data-aos="zoom-in" data-aos-delay="400">
+  <section class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-900 to-purple-700 text-white text-center px-6 pt-28 md:pt-32">
+    <img src="Adiat.jpg" alt="Foto Saya" class="w-32 h-32 sm:w-40 sm:h-40 md:w-52 md:h-52 object-cover rounded-full shadow-2xl mb-6 border-4 border-white" data-aos="fade-down">
+    <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-wide" data-aos="fade-up">Adiat Pahla Saputra</h1>
+    <p class="text-base sm:text-lg mt-3 opacity-90" data-aos="fade-up" data-aos-delay="200">Pelajar / X TJKT 1 / Explorasi Tanpa Henti</p>
+    <a href="#tentang" class="mt-8 px-6 py-3 bg-white text-gray-900 font-semibold rounded-full shadow-lg hover:bg-gray-200 transition" data-aos="zoom-in" data-aos-delay="400">
       Scroll ke Bawah
     </a>
   </section>
 
   <!-- Tentang Saya -->
-  <section id="tentang" class="max-w-4xl mx-auto py-24 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center text-purple-700" data-aos="fade-up">Tentang Saya</h2>
-    <p class="leading-relaxed text-gray-700 text-center text-lg" data-aos="fade-up" data-aos-delay="200">
+  <section id="tentang" class="max-w-4xl mx-auto py-20 md:py-24 px-6 md:px-8">
+    <h2 class="text-3xl font-bold mb-6 text-center text-purple-700 dark:text-purple-400" data-aos="fade-up">Tentang Saya</h2>
+    <p class="leading-relaxed text-gray-700 dark:text-gray-300 text-center text-base sm:text-lg" data-aos="fade-up" data-aos-delay="200">
       Halo, saya <strong>Adiat Pahla Saputra</strong> kelas X TJKT 1 SMK Negeri 4 Klaten. 
       Saya suka belajar hal baru, cepat beradaptasi, dan mampu bekerja sama dalam tim. 
       Saya percaya bahwa dengan teknologi, kita bisa menciptakan hal-hal bermanfaat untuk masa depan.
@@ -52,33 +72,33 @@
   </section>
 
   <!-- Kemampuan -->
-  <section id="skills" class="bg-gray-100 py-24 px-6">
+  <section id="skills" class="bg-gray-100 dark:bg-gray-800 py-20 md:py-24 px-6 md:px-8">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl font-bold mb-12 text-center text-purple-700" data-aos="fade-up">Kemampuan</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="100">
-          <i class="fas fa-users w-10 h-10 text-purple-600 mb-4 text-3xl"></i>
+      <h2 class="text-3xl font-bold mb-12 text-center text-purple-700 dark:text-purple-400" data-aos="fade-up">Kemampuan</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+        <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-users text-purple-600 dark:text-purple-400 mb-4 text-3xl"></i>
           <h3 class="font-semibold text-xl mb-2">Kerja Sama</h3>
-          <p class="text-gray-600">Mampu bekerja sama dalam tim dengan baik untuk mencapai tujuan bersama.</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Mampu bekerja sama dalam tim untuk mencapai tujuan bersama.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="200">
-          <i class="fas fa-sync-alt w-10 h-10 text-purple-600 mb-4 text-3xl"></i>
+        <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-sync-alt text-purple-600 dark:text-purple-400 mb-4 text-3xl"></i>
           <h3 class="font-semibold text-xl mb-2">Adaptasi</h3>
-          <p class="text-gray-600">Mudah beradaptasi dengan lingkungan baru dan cepat belajar hal baru.</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Mudah beradaptasi dengan lingkungan baru dan cepat belajar hal baru.</p>
         </div>
-        <div class="p-6 bg-white rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="300">
-          <i class="fas fa-code w-10 h-10 text-purple-600 mb-4 text-3xl"></i>
+        <div class="p-6 bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-xl transition transform hover:-translate-y-1 text-center" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-code text-purple-600 dark:text-purple-400 mb-4 text-3xl"></i>
           <h3 class="font-semibold text-xl mb-2">Pemrograman</h3>
-          <p class="text-gray-600">Menguasai dasar-dasar pemrograman HTML dan siap mengembangkan keterampilan lain.</p>
+          <p class="text-gray-600 dark:text-gray-300 text-sm md:text-base">Menguasai dasar-dasar HTML dan terus belajar pengembangan web.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Informasi Lain -->
-  <section id="info" class="max-w-4xl mx-auto py-24 px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center text-purple-700" data-aos="fade-up">Informasi Lain</h2>
-    <ul class="space-y-4 text-gray-700 text-center text-lg" data-aos="fade-up" data-aos-delay="200">
+  <section id="info" class="max-w-4xl mx-auto py-20 md:py-24 px-6 md:px-8">
+    <h2 class="text-3xl font-bold mb-6 text-center text-purple-700 dark:text-purple-400" data-aos="fade-up">Informasi Lain</h2>
+    <ul class="space-y-4 text-gray-700 dark:text-gray-300 text-center text-base sm:text-lg" data-aos="fade-up" data-aos-delay="200">
       <li><strong>Pendidikan:</strong> SMK Negeri 4 Klaten - TJKT</li>
       <li><strong>Pengalaman:</strong> Membuat website portofolio sederhana</li>
       <li><strong>Hobi:</strong> Fotografi, Teknologi, Eksperimen Kreatif</li>
@@ -86,35 +106,41 @@
   </section>
 
   <!-- Kontak -->
-  <section id="kontak" class="bg-gray-900 text-white py-24 px-6">
+  <section id="kontak" class="bg-gray-900 dark:bg-gray-950 text-white py-20 md:py-24 px-6 md:px-8">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">Kontak</h2>
-      <p class="mb-4" data-aos="fade-up" data-aos-delay="100">Hubungi saya melalui kontak berikut:</p>
-      <p data-aos="fade-up" data-aos-delay="200">Email: <a href="mailto:adiatpahla3@gmail.com" class="underline">adiatpahla3@gmail.com</a></p>
-      <p data-aos="fade-up" data-aos-delay="300">Telepon: 0882003747161</p>
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Kontak</h2>
+      <p class="mb-3 text-sm sm:text-base" data-aos="fade-up" data-aos-delay="100">Hubungi saya melalui kontak berikut:</p>
+      <p data-aos="fade-up" data-aos-delay="200" class="text-sm sm:text-base">Email: <a href="mailto:adiatpahla3@gmail.com" class="underline">adiatpahla3@gmail.com</a></p>
+      <p data-aos="fade-up" data-aos-delay="300" class="text-sm sm:text-base">Telepon: 0882003747161</p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500 text-sm">
+  <footer class="py-6 text-center text-gray-500 dark:text-gray-400 text-xs sm:text-sm">
     © 2025 Adiat Pahla Saputra. All rights reserved.
   </footer>
 
+  <!-- Script -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // Navbar hide on scroll down
+    // Navbar hide on scroll
     let prevScroll = window.pageYOffset;
     window.onscroll = function () {
-      let currentScroll = window.pageYOffset;
-      if (prevScroll > currentScroll) {
-        document.getElementById("navbar").style.top = "0";
-      } else {
-        document.getElementById("navbar").style.top = "-80px";
-      }
+      const navbar = document.getElementById("navbar");
+      const currentScroll = window.pageYOffset;
+      navbar.style.top = prevScroll > currentScroll ? "0" : "-80px";
       prevScroll = currentScroll;
     };
+
+    // Menu toggle
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
   </script>
 </body>
-</html>
+  </html>
+  
