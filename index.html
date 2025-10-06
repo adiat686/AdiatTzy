@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
@@ -5,25 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#4f46e5" />
   <title>Portofolio Adiat</title>
-
-  <!-- Favicon -->
   <link rel="icon" href="favicon.png" type="image/png" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="manifest.json" />
 
   <style>
     .navbar { transition: top 0.4s; }
   </style>
+
+  <link rel="manifest" href="manifest.json">
 </head>
 
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
@@ -43,7 +35,14 @@
 
       <!-- Tombol sosial + menu hamburger -->
       <div class="flex items-center space-x-4">
-        <a href="https://github.com/adiat686" target="_blank" class="hidden sm:inline hover:text-gray-800 dark:hover:text-white"><i class="fab fa-github text-lg"></i></a>
+        <!-- Media Sosial -->
+        <div class="hidden sm:flex space-x-3 text-lg">
+          <a href="https://github.com/adiat686" target="_blank" class="hover:text-gray-800 dark:hover:text-white"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/adiatpahlasaputra?igsh=MXhrc2E4eDV5d2Zudw==" target="_blank" class="hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@adiatpahla2097" target="_blank" class="hover:text-red-500"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.tiktok.com/@orangbiasa0714?_t=ZS-90Jy81pj4Hn&_r=1" target="_blank" class="hover:text-gray-700"><i class="fab fa-tiktok"></i></a>
+        </div>
+
         <button id="menu-btn" class="md:hidden text-2xl text-purple-700 dark:text-purple-300 focus:outline-none">
           <i class="fas fa-bars"></i>
         </button>
@@ -150,5 +149,5 @@
     });
   </script>
 </body>
-    </html>
+  </html>
   
